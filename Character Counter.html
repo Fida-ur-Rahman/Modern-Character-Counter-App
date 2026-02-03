@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./Charcter.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-keyboard"></i> Character Counter</h1>
+            <p>Count characters, words, sentences, and paragraphs in real-time as you type</p>
+        </div>
+        
+        <div class="content">
+            <div class="input-section">
+                <h2><i class="fas fa-edit"></i> Type Your Text</h2>
+                <textarea id="textInput" placeholder="Start typing here...">Hello! This is a character counter demo. As you type, you'll see real-time statistics about your text including character count, word count, and more. Try it out by typing, pasting, or editing this text.</textarea>
+                
+                <div class="limit-options">
+                    <p class="stat-title"><i class="fas fa-ruler"></i> Set Character Limit:</p>
+                    <button class="limit-btn" data-limit="100">100</button>
+                    <button class="limit-btn" data-limit="280">280 (Twitter)</button>
+                    <button class="limit-btn active" data-limit="500">500</button>
+                    <button class="limit-btn" data-limit="1000">1000</button>
+                    <button class="limit-btn" data-limit="0">No Limit</button>
+                </div>
+                
+                <div class="progress-container">
+                    <p class="stat-title"><i class="fas fa-chart-line"></i> Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span id="progressText">0% used</span>
+                        <span id="limitText">Limit: 500 characters</span>
+                    </div>
+                </div>
+                
+                <button class="reset-btn" id="resetBtn">
+                    <i class="fas fa-redo"></i> Reset Text
+                </button>
+            </div>
+            
+            <div class="stats-section">
+                <h2><i class="fas fa-chart-bar"></i> Statistics</h2>
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <p class="stat-title"><i class="fas fa-font"></i> Characters</p>
+                        <div class="stat-value" id="charCount">0</div>
+                        <div class="char-types">
+                            <div class="char-type-item">
+                                <span class="char-type-label">Characters (no spaces)</span>
+                                <span class="char-type-value" id="charNoSpacesCount">0</span>
+                            </div>
+                            <div class="char-type-item">
+                                <span class="char-type-label">Characters (with spaces)</span>
+                                <span class="char-type-value" id="charWithSpacesCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <p class="stat-title"><i class="fas fa-file-word"></i> Words</p>
+                        <div class="stat-value" id="wordCount">0</div>
+                        <div class="char-types">
+                            <div class="char-type-item">
+                                <span class="char-type-label">Sentences</span>
+                                <span class="char-type-value" id="sentenceCount">0</span>
+                            </div>
+                            <div class="char-type-item">
+                                <span class="char-type-label">Paragraphs</span>
+                                <span class="char-type-value" id="paragraphCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <p class="stat-title"><i class="fas fa-clock"></i> Reading Time</p>
+                        <div class="stat-value" id="readingTime">0</div>
+                        <div class="char-types">
+                            <div class="char-type-item">
+                                <span class="char-type-label">Speaking Time</span>
+                                <span class="char-type-value" id="speakingTime">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Character Counter &copy; 2026 | Counts update in real-time as you type</p>
+            <p>Try pasting text from another source or typing your own to see the counters update instantly.</p>
+        </div>
+    </div>
+</body>
+<script src="./Chacter.js"></script>
+</html>
