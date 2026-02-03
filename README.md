@@ -19,7 +19,7 @@ A modern and responsive **Character Counter Web Application** built using **HTML
 
 ##  Preview
 
-Check my Project:
+Check my Project:https://fida-ur-rahman.github.io/Modern-Character-Counter-App/
 
 
 
